@@ -36,20 +36,39 @@
     </div>
     <div class="time">
 
-
-      <div class="days box">
-        <div class="overlain"></div><div class="dayss"></div>
-      </div>
-      <div class="hours box">
-        <div class="overlain"></div><div class="hourss"></div>
-      </div>
-      <div class="minutes box">
-        <div class="overlain"></div><div class="minutess"></div>
-      </div>
-      <div class="seconds box">
-        <div class="overlain"></div><div class="secondss"></div>
+      <div>
+        <div class="days box">
+          <div class="overlain"></div>
+          <div class="dayss"></div>
+        </div>
+        <div class="men-day hiphen">DAYS</div>
       </div>
 
+      <div>
+        <div class="hours box">
+          <div class="overlain"></div>
+          <div class="hourss"></div>
+        </div>
+        <div class="men-hours hiphen">HOURS</div>
+      </div>
+      <div>
+
+        <div class="minutes box">
+          <div class="overlain"></div>
+          <div class="minutess"></div>
+        </div>
+        <div class="men-minutes hiphen">MINUTES</div>
+      </div>
+
+      <div>
+
+        <div class="seconds box">
+          <div class="overlain"></div>
+          <div class="secondss"></div>
+        </div>
+        <div class="men-seconds hiphen">SECONDS</div>
+      </div>
+        
     </div>
     <footer>
       <div class="bottom">
@@ -87,23 +106,23 @@
   <script>
     // Set the date for Bakra Eid (assuming it's on 10th Zul Hijjah)
     const eidDate = new Date("2024-06-16T00:00:00Z");
-    
+
     function countdown() {
       const now = new Date().getTime();
       const distance = eidDate - now;
-    
+
       // Calculate days, hours, minutes, and seconds
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
       // Display the countdown
       document.querySelector(".dayss").innerText = days;
       document.querySelector(".hourss").innerText = hours;
       document.querySelector(".minutess").innerText = minutes;
       document.querySelector(".secondss").innerText = seconds;
-    
+
       // If the countdown is over, display a message
       if (distance < 0) {
         clearInterval(timer);
@@ -114,10 +133,10 @@
         // document.querySelector(".countdown").innerText = "Eid Mubarak!";
       }
     }
-    
+
     // Update the countdown every second
     const timer = setInterval(countdown, 1000);
-    </script>
+  </script>
 </body>
 
 </html>

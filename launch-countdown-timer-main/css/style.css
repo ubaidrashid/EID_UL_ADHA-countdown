@@ -107,7 +107,17 @@ footer {
     width: 100%;
 
 }
-
+.hiphen{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    color: var(--Grayish-blue);
+    z-index: 11;
+}
 .logos {
     z-index: 10;
     display: flex;
