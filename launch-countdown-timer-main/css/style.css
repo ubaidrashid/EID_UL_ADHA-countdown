@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ### Primary */
+
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --clr-overflow-style: hsl(234, 17%, 12%);
+}
+
+.front-face {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    background-color: var(--Very-dark-blue);
+    opacity: 20%;
+}
+
+.overlain {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50%;
+    width: 100%;
+    background-color: #211A29;
+    opacity: 40%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.527);
+
+}
+
+.box {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #2F2439;
+    color: var(--Soft-red);
+    font-size: clamp(60px, 3vw, 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 10px 2px black;
+}
+
+main {
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 700;
+    width: 100%;
+    background-color: var(--Very-dark-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.bottom {
+    position: absolute;
+    bottom: -10px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: var(--White);
+}
+
+.title h1 {
+    font-size: clamp(18px, 3vw, 25px);
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.time {
+    display: flex;
+    width: 55%;
+    justify-content: space-evenly;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.logos {
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    width: 10%;
+}
+
+@media (max-width:540px) {
+    .time {
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        height: 80%;
+    }
+
+    main{
+        height: 150vh;
+        z-index: -2;
+    }
+    .title{
+        text-align: center;
+    }
+    .logos{
+        width: 50%;
+    }
+    .bottom{
+        z-index: -1;
+    }
+}
+@media (min-width :767px) and (max-width:1025px){
+    .time{
+        width: 100%;
+    }
+}
